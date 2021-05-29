@@ -1,17 +1,16 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// shu joyga bootstp ulanadi;
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-toastify/dist/ReactToastify.css'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import NavigationBar from "./companets/NavigationBar";
+import Lifecikle from "./companets/lifecikle"
+import Server from "./companets/Server";
+import ClassToday from "./companets/classtoday";
+import Emploer from "./companets/emploer"
+import Hooks from "./companets/hooks";
+import Routing from "./companets/Routing"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render( <Routing/> , document.getElementById('root'));

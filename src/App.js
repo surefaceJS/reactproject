@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./sass/main.scss";
+import NavigationBar from "./companets/NavigationBar"
+import Lifecikle from "./companets/lifecikle"
+
+import Server from "./companets/Server"
+import Emploer from "./companets/emploer"
+import ClassToday from "./companets/classtoday"
+import React, {useState} from "react";
+
 
 function App() {
+
+    const  [counter, setCounter] = useState(999999999999)
+
+
+    function plus() {
+        setCounter(counter + 1)
+    }
+    function minus() {
+        setCounter(counter - 1)
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+        <h1>yourAgr: {counter}</h1>
+
+        <button onClick={plus} className="btn btn-success">+</button>
+        <button onClick={minus} className="btn btn-danger">-</button>
+
+
+
     </div>
   );
 }
